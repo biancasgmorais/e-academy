@@ -2,8 +2,8 @@
 Projeto de sistema Web para a disciplina Programação Web
 
 # Linguagens Utilizadas
-* ReactJS (frontend)
-* NodeJS (backend)
+* React.js(frontend)
+* Node.js (backend)
 
 # Resumo do Sistema
 Esse sistema foi desenvolvido para ser um sistema academico online, onde alunos e professores tem acessos a funcionalidades, juntamente com o administrador do sistema (já vem previamente inserido no banco).
