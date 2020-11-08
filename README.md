@@ -9,7 +9,7 @@ Projeto de sistema Web para a disciplina Programação Web
 Esse sistema foi desenvolvido para ser um sistema academico online, onde alunos e professores tem acessos a funcionalidades, juntamente com o administrador do sistema (já vem previamente inserido no banco).
 As funcionalidades são:
 
-##Alunos:
+## Alunos:
 * podem se cadastrar em disciplinas;
 * Visualizar arquivos inseridos nas disciplinas;
 * Atualizar seu perfil e sua senha;
@@ -17,14 +17,14 @@ As funcionalidades são:
 * Recuperar sua senha por e-mail;
 * Excluir seu perfil;
 
-##Professores:
+## Professores:
 * Inserir arquivos nas disciplinas;
 * Atualizar seu perfil e sua senha;
 * Recuperar sua senha por email;
 * Atualizar as notas de cada aluno por disciplina;
 * Excluir seu perfil;
 
-##Administrador:
+## Administrador:
 * Liberar o acesso de usuários ao sistema: professores e alunos; (Ao liberar o acesso é enviado uma mensagem ao email do usuário o notificando da liberação)
 * Cadastrar professores nas disciplinas;
 * Visualizar dados de todos os usuários cadastrados no sistema;
