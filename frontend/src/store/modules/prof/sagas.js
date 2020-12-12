@@ -4,19 +4,6 @@ import { updateProfileSuccess, updateProfileFailure } from './action';
 import history from '../../../services/history';
 import api from '../../../services/api';
 
-export function* updateProf({ payload }) {
-  try {
-    const prof = payload.data;
-
-    yield call(api.put, 'professors', prof);
-
-    toast.success('Professor atualizado com sucesso!');
-    history.push('/modulesprofessor');
-  } catch (error) {
-    toast.error('Erro ao atualizar professor, verifique os dados...');
-  }
-}
-
 export function* updateProfile({ payload }) {
   try {
     const profile = payload.data;
@@ -50,7 +37,6 @@ export function* forgotPass({ payload }) {
 }
 
 export default all([
-  takeLatest('@prof/UPDATE_PROF_REQUEST', updateProf),
   takeLatest('@prof/UPDATE_PROFILE_REQUEST', updateProfile),
   takeLatest('@prof/FORGOT_PASS_REQUEST', forgotPass),
 ]);

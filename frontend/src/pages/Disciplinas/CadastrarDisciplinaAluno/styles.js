@@ -15,16 +15,17 @@ export const Content = styled.div`
   justify-content: center;
 
   h1 {
+    box-shadow: 2px 2px #ae52d4;
+    padding: 5px;
+    border-style: double solid double;
+    border-color: #4a0072;
     margin-top: 10px;
     text-align: center;
     width: 300px;
-    height: 25px;
+    height: 30px;
     font: 16px 'Roboto', sans-serif;
     font-weight: bold;
-    color: #c0c0c0;
-    background #6a5acd;
-    border: 4px solid #6a5acd;
-    border-radius: 4px;
+    color: #4a0072;
     text-transform: uppercase;
   }
 
@@ -38,27 +39,38 @@ export const Content = styled.div`
       margin-top: 5px;
       font: 14px 'Roboto', sans-serif;
       font-weight: bold;
-      color: #6a5acd;
+      color: #4a0072;
       text-transform: uppercase;
     }
 
-    input {
-      height: 27px;
+    select {
+      height: 25px;
       font: 14px 'Roboto', sans-serif;
-      color: #191970;
-      background-color: #c0c0c0;
-      border: 1px solid #6a5acd;
+      color: #4a0072;
+      background-color: #e0e0e0;
+      border: 1px solid #4a0072;
+      border-radius: 4px;
+      padding: 0 10px;
+      margin: 0 0 10px;
+    }
+
+    input {
+      height: 25px;
+      font: 14px 'Roboto', sans-serif;
+      color: #4a0072;
+      background-color: #e0e0e0;
+      border: 1px solid #4a0072;
       border-radius: 4px;
       padding: 0 15px;
       margin: 0 0 10px;
 
       &::placeholder {
-        color: rgba(255, 255, 255, 0.7);
+        color: #4a0072;
       }
     }
 
     span {
-      color: #e91010;
+      color: #4a0072;
       align-self: flex-start;
       margin: 0 0 10px;
       font-weight: bold;
@@ -73,20 +85,20 @@ export const Content = styled.div`
     align-center: center;
 
     button {
-      margin-right: 10px;
-      width: 100px;
-      height: 50px;
-      font: 14px 'Roboto', sans-serif;
+      box-shadow: 2px 2px #ae52d4;
+      margin: 10px 0 0;
+      width: 150px;
+      height: 44px;
+      font: 21px 'Roboto', sans-serif;
       font-weight: bold;
-      color: #c0c0c0;
-      background: #6a5acd;
-      border: 1px solid #191970;
+      color: #ffff;
+      background: #7b1fa2;
+      border: 1px solid #7b1fa2;
       border-radius: 6px;
       transition: background 0.2s;
-      text-transform: uppercase;
 
       &:hover {
-        background: ${darken(0.08, '#6a5acd')};
+        background: ${darken(0.08, '#7b1fa2')};
       }
     }
   }

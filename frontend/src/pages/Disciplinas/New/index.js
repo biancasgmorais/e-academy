@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import { Link } from 'react-router-dom';
-import { Form, Input } from '@rocketseat/unform';
+import { Form, Input, Select } from '@rocketseat/unform';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
 import api from '../../../services/api';
@@ -57,11 +57,13 @@ export default function New() {
             <h2>Horario</h2>
             <Input name="horario" />
             <h2>Matricula Professor</h2>
-            <select name="professor_ass" placeholder="Matricula do professor">
-              {professors.map((prof) => (
-                <option>{prof.matricula_prof}</option>
-              ))}
-            </select>
+            <Select
+              name="professor_ass"
+              options={professors.map((prof) => ({
+                id: prof.matricula_prof,
+                title: prof.name,
+              }))}
+            />
             <div className="botoes">
               <button type="submit">Cadastrar</button>
             </div>

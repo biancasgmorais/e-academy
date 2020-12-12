@@ -1,10 +1,3 @@
-export const updateProfRequest = (data) => {
-  return {
-    type: '@prof/UPDATE_PROF_REQUEST',
-    payload: { data },
-  };
-};
-
 export const updateProfileRequest = (data) => {
   return {
     type: '@prof/UPDATE_PROFILE_REQUEST',

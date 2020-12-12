@@ -2,7 +2,7 @@
 import React from 'react';
 import { MdExitToApp } from 'react-icons/md';
 import { RiMenu4Line } from 'react-icons/ri';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import { signOut } from '../../../store/modules/authprofessor/action';
 
@@ -11,7 +11,6 @@ import logo2 from '../../../assets/logo.png';
 
 export default function Professor() {
   const dispatch = useDispatch();
-  const profile = useSelector((state) => state.prof.profile);
 
   function handleSignOut() {
     dispatch(signOut());
@@ -35,9 +34,6 @@ export default function Professor() {
             </button>
           </div>
           <img src={logo2} alt="e-academy" />
-        </div>
-        <div className="usuario">
-          <strong>Bem-vind@, Professor(a) {profile.name}</strong>
         </div>
       </Content>
     </>

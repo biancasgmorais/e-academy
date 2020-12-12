@@ -58,13 +58,4 @@ export const Content = styled.div`
     height: 25px;
     width: 90px;
   }
-
-  .usuario {
-    float: right;
-    padding: 15px;
-    strong {
-      display: block;
-      color: #ffff;
-    }
-  }
 `;

@@ -2,7 +2,7 @@
 import React from 'react';
 import { MdExitToApp } from 'react-icons/md';
 import { RiMenu4Line } from 'react-icons/ri';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import { signOut } from '../../../store/modules/authaluno/action';
 
@@ -11,7 +11,6 @@ import logo2 from '../../../assets/logo.png';
 
 export default function Aluno() {
   const dispatch = useDispatch();
-  const perfil = useSelector((state) => state.aluno.profile);
 
   function handleSignOut() {
     dispatch(signOut());
@@ -34,9 +33,6 @@ export default function Aluno() {
             </button>
           </div>
           <img src={logo2} alt="e-academy" />
-        </div>
-        <div className="usuario">
-          <strong>Bem-vind@, Alun@ {perfil.name}</strong>
         </div>
       </Content>
     </>

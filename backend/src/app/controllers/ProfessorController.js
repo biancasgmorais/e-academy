@@ -56,8 +56,8 @@ class ProfessorController {
     const userExists = await Professor.findOne({
       where: { email: req.body.email },
     });
-    if (!userExists) {
-      return res.status(400).json({ error: 'Usuário não existente' });
+    if (userExists) {
+      return res.status(400).json({ error: 'Usuário existente' });
     }
 
     if (req.body.escolaridade.toLowerCase() !== 'doutorado') {

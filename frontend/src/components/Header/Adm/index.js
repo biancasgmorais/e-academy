@@ -31,9 +31,6 @@ export default function Adm() {
           </div>
           <img src={logo2} alt="e-academy" />
         </div>
-        <div className="usuario">
-          <strong>Bem-vind@, Administrador</strong>
-        </div>
       </Content>
     </>
   );

@@ -1,16 +1,12 @@
 /* eslint-disable react/button-has-type */
 import React, { useState, useEffect } from 'react';
-
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
-import { Form, Input, Select } from '@rocketseat/unform';
+import { Form, Input } from '@rocketseat/unform';
 import * as Yup from 'yup';
 
-import {
-  updateProfileRequest,
-  updateProfRequest,
-} from '../../../store/modules/prof/action';
+import { updateProfileRequest } from '../../../store/modules/prof/action';
 import { signOut } from '../../../store/modules/authprofessor/action';
 
 import Menu from '../../../components/Header/Professor';
@@ -34,18 +30,8 @@ const schema = Yup.object().shape({
   ),
 });
 
-const schema2 = Yup.object().shape({
-  email: Yup.string().email().required('O email é requerido'),
-  name: Yup.string().required('Nome é obrigatório'),
-  formacao: Yup.string().required('Formação é obrigatório'),
-  escolaridade: Yup.string().required(
-    'Campo obrigatório: Graduação / Mestrado / Doutorado'
-  ),
-});
-
 export default function Professor() {
   const dispatch = useDispatch();
-  const profile = useSelector((state) => state.prof.profile);
   const [professors, setProfessor] = useState([]);
 
   useEffect(() => {
@@ -58,17 +44,8 @@ export default function Professor() {
 
   const handleSubmit = (data) => {
     dispatch(updateProfileRequest(data));
+    dispatch(signOut());
   };
-
-  const handleSubmit2 = (data) => {
-    dispatch(updateProfRequest(data));
-  };
-
-  const options2 = [
-    { id: 'Graduação', title: 'Graduação' },
-    { id: 'Mestrado', title: 'Mestrado' },
-    { id: 'Doutorado', title: 'Doutorado' },
-  ];
 
   const handleDelete = async () => {
     try {
@@ -93,22 +70,8 @@ export default function Professor() {
       <Content>
         <h1>Meus dados</h1>
 
-        <Form onSubmit={handleSubmit2} schema={schema2} autoComplete="off">
-          <Input name="email" type="email" placeholder="email" />
-          <Input name="name" placeholder="Nome Completo" />
-          <Input name="formacao" placeholder="Formação" />
-          <Select
-            name="escolaridade"
-            options={options2}
-            placeholder="Escolaridade"
-          />
-          <div className="botoes">
-            <button type="submit">Atualizar dados</button>
-          </div>
-        </Form>
-
         <h1>Senha</h1>
-        <Form initialData={profile} onSubmit={handleSubmit} schema={schema}>
+        <Form onSubmit={handleSubmit} schema={schema}>
           <Input name="matricula_prof" type="number" placeholder="Matricula" />
           <Input name="password" type="password" placeholder="Senha Nova" />
           <Input
