@@ -1,48 +1,76 @@
 # e-academy
-Projeto de sistema Web para a disciplina Programação Web
 
-# Linguagens Utilizadas
-* React.js(frontend)
-* Node.js (backend)
+**e-academy** é um sistema web desenvolvido para a disciplina de **Programação Web**, com o objetivo de fornecer um ambiente acadêmico online para **alunos**, **professores** e **administradores**. O sistema foi desenvolvido utilizando **React.js** no frontend e **Node.js** no backend, com **PostgreSQL** para armazenamento de dados.
 
-# Resumo do Sistema
-Esse sistema foi desenvolvido para ser um sistema academico online, onde alunos e professores tem acessos a funcionalidades, juntamente com o administrador do sistema (já vem previamente inserido no banco).
-As funcionalidades são:
+## Linguagens Utilizadas
 
-## Alunos:
-* podem se cadastrar em disciplinas;
-* Visualizar arquivos inseridos nas disciplinas;
-* Atualizar seu perfil e sua senha;
-* Visualizar suas notas por disciplina;
-* Recuperar sua senha por e-mail;
-* Excluir seu perfil;
+- **Frontend**: React.js
+- **Backend**: Node.js
 
-## Professores:
-* Inserir arquivos nas disciplinas;
-* Atualizar seu perfil e sua senha;
-* Recuperar sua senha por email;
-* Atualizar as notas de cada aluno por disciplina;
-* Excluir seu perfil;
+## Resumo do Sistema
 
-## Administrador:
-* Liberar o acesso de usuários ao sistema: professores e alunos; (Ao liberar o acesso é enviado uma mensagem ao email do usuário o notificando da liberação)
-* Cadastrar professores nas disciplinas;
-* Visualizar dados de todos os usuários cadastrados no sistema;
+O **e-academy** é um sistema de gerenciamento acadêmico online com funcionalidades para diferentes tipos de usuários:
 
-# Descrição
-* Usa JWT para autenticação
-* bcrypt para encriptação de senhas
-* A validação de dados é feita por protocolo Yup
+### **Alunos**:
+- Cadastro em disciplinas.
+- Visualização de arquivos inseridos nas disciplinas.
+- Atualização de perfil e senha.
+- Visualização de notas por disciplina.
+- Recuperação de senha por e-mail.
+- Exclusão de perfil.
 
-# Rodando o projeto
-* É necessário ter o postgres
-* É necessário ter o Node.js instalado
-* O gerenciador de pacotes Yarn deve estar instalado e habilitado
-## Backend
-* Para a instação dos pacotes necessários, usar o comando: yarn
-* Renomear o arquivo .env.example para .env e preencher as váriaveis de desenvolvimento, com as suas credenciais.
-* Com o código do backend aberto na IDE de sua escolha, usar o comando: yarn sequelize db:migrate, para inserir as tabelas no banco de dados.
-* Para rodar o código do backend em modo desenvolvedor, usar o comando: yarn dev 
-## Frontend
-* Para a instação dos pacotes necessários, usar o comando: yarn
-* Para rodar o código do frontend em modo desenvolvedor, usar o comando: yarn start
+### **Professores**:
+- Inserção de arquivos nas disciplinas.
+- Atualização de perfil e senha.
+- Recuperação de senha por e-mail.
+- Atualização das notas dos alunos por disciplina.
+- Exclusão de perfil.
+
+### **Administrador**:
+- Liberação de acesso a usuários (professores e alunos), com envio de notificação por e-mail.
+- Cadastro de professores nas disciplinas.
+- Visualização de dados de todos os usuários cadastrados no sistema.
+
+## Descrição
+
+- **Autenticação**: Utiliza **JWT** para autenticação de usuários.
+- **Segurança**: Senhas são criptografadas utilizando **bcrypt**.
+- **Validação de Dados**: A validação dos dados é realizada com o protocolo **Yup**.
+
+## Rodando o Projeto
+
+### **Pré-requisitos**
+- **PostgreSQL** instalado e configurado.
+- **Node.js** instalado.
+- **Yarn** como gerenciador de pacotes.
+
+### **Backend**
+
+1. Instale as dependências necessárias:
+   ```bash
+   yarn
+   ```
+
+2. Renomeie o arquivo `.env.example` para `.env` e preencha as variáveis de ambiente com suas credenciais de desenvolvimento.
+
+3. Com o código do backend aberto na sua IDE, execute o seguinte comando para inserir as tabelas no banco de dados:
+   ```bash
+   yarn sequelize db:migrate
+   ```
+
+4. Para rodar o backend em modo desenvolvedor, use o comando:
+   ```bash
+   yarn dev
+   ```
+
+### **Frontend**
+
+1. Instale as dependências necessárias:
+   ```bash
+   yarn
+   ```
+
+2. Para rodar o frontend em modo desenvolvedor, use o comando:
+   ```bash
+   yarn start
+   ```
